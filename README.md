@@ -23,3 +23,25 @@ It silently monitors the live kernel logs (dmesg / journalctl) for the exact URB
 
 ## Result
 Your keyboard and USB ports are fully revived in less than 2 seconds—without requiring a reboot, a password, or even an Alt+Tab.
+
+## Installation
+
+**1. Clone the repository:**
+
+    git clone [https://github.com/YOUR-USERNAME/asus-rog-usb-watchdog.git](https://github.com/YOUR-USERNAME/asus-rog-usb-watchdog.git)
+    cd asus-rog-usb-watchdog
+
+**2. Copy the scripts to the standard local binary folder and make them executable:**
+
+    sudo cp usb_watchdog.sh rescue_keyboard.sh /usr/local/bin/
+    sudo chmod +x /usr/local/bin/usb_watchdog.sh
+    sudo chmod +x /usr/local/bin/rescue_keyboard.sh
+
+**3. Move the systemd service to the correct folder:**
+
+    sudo cp usb-rescue.service /etc/systemd/system/
+
+**4. Enable and start the Watchdog service:**
+
+    sudo systemctl enable usb-rescue.service
+    sudo systemctl start usb-rescue.service

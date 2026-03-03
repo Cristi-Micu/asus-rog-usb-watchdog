@@ -1,0 +1,11 @@
+[Unit]
+Description=Automatic USB Crash Rescue Watchdog
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/usb_watchdog.sh
+Restart=always
+User=root
+
+[Install]
+WantedBy=multi-user.target

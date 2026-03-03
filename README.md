@@ -28,7 +28,7 @@ Your keyboard and USB ports are fully revived in less than 2 seconds—without r
 
 **1. Clone the repository:**
 
-    git clone [https://github.com/YOUR-USERNAME/asus-rog-usb-watchdog.git](https://github.com/YOUR-USERNAME/asus-rog-usb-watchdog.git)
+    gh repo clone Cristi-Micu/asus-rog-usb-watchdog
     cd asus-rog-usb-watchdog
 
 **2. Copy the scripts to the standard local binary folder and make them executable:**
